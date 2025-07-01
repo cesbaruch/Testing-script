@@ -15,7 +15,7 @@ local Window = Rayfield:CreateWindow({
        Subtitle = "Created by Cesar" ,
        Note = "In Honour of Kchungdz" ,
        FileName = "0", 
-       SaveKey = True,
+       SaveKey = true,
        GrabKeyFromSite = true,
        Key = {"200800"}
     }
@@ -215,12 +215,12 @@ local Section = Tab2:CreateSection("Start Duping items")
 
 
 local Button = Tab2:CreateButton({
-    Name = "🏁 Start Dupe",
+    Name = "Start Duping",
     Callback = function()
         -- Gửi thông báo khi nhấn Start Dupe
         game.StarterGui:SetCore("SendNotification", {
             Title = "Dupe Started",
-            Text = "Dupe process has started successfully.",
+            Text = "Dupe process has Activated",
             Duration = 4,  -- Thời gian hiển thị thông báo (4 giây)
         })
         
@@ -279,7 +279,7 @@ local Button = Tab2:CreateButton({
         local Event = ReplicatedStorage.References.Comm.Events.UpdateStorageChest
 
         for _, itemID in ipairs(itemIDs) do
-            Event:FireServer(chest, PutOut, itemID)
+            Event:FireServer(chest, Putout, itemID)
         end
     end,
 })
@@ -479,7 +479,7 @@ local Section = Tab3:CreateSection("Gliders 🪁")
 local Section = Tab3:CreateSection("Books,Food,etc")
 
 local Button = Tab3:CreateButton({
-    Name = "🌀Portal Book",
+    Name = "Portialo",
     Callback = function()
         local chest = GetClosestChest()
         if not chest then
@@ -498,7 +498,7 @@ local Button = Tab3:CreateButton({
 })
 
 local Button = Tab3:CreateButton({
-    Name = "🛡️Deflect Book",
+    Name = "Deflectio Projectio",
     Callback = function()
         local chest = GetClosestChest()
         if not chest then
@@ -517,7 +517,7 @@ local Button = Tab3:CreateButton({
 })
 
 local Button = Tab3:CreateButton({
-    Name = "🥶Freezio Book",
+    Name = "Freezio",
     Callback = function()
         local chest = GetClosestChest()
         if not chest then
@@ -536,7 +536,7 @@ local Button = Tab3:CreateButton({
 })
 
 local Button = Tab3:CreateButton({
-    Name = "💀Oofio Book",
+    Name = "Oofio",
     Callback = function()
         local chest = GetClosestChest()
         if not chest then
@@ -565,6 +565,11 @@ local Button = Tab3:CreateButton({
 
         local putIn = true
         local itemIDs = {379}
+
+        for i = 1, 10 do
+            table.insert(itemIDs, 379)
+        end
+
         local Event = ReplicatedStorage.References.Comm.Events.UpdateStorageChest
 
         for _, itemID in ipairs(itemIDs) do
@@ -598,7 +603,7 @@ local Button = Tab3:CreateButton({
 })
 
 local Button = Tab3:CreateButton({
-    Name = "PutOut Easter Candy 500x",
+    Name = "PutOut All Easter Candy",
     Callback = function()
         local chest = GetClosestChest()
         if not chest then
@@ -632,7 +637,7 @@ local Button = Tab3:CreateButton({
         local putIn = true
         local itemIDs = {378}
         
-        for i = 1, 499 do
+        for i = 1, 500 do
             table.insert(itemIDs, 378)
         end
         local Event = ReplicatedStorage.References.Comm.Events.UpdateStorageChest
@@ -644,7 +649,7 @@ local Button = Tab3:CreateButton({
 })
 
  local Button = Tab3:CreateButton({
-   Name =   "PutOut Pumpkin 500x",
+   Name =   "PutOut All Pumpkins",
    Callback = function()
         local chest = GetClosestChest()
         if not chest then
@@ -655,13 +660,13 @@ local Button = Tab3:CreateButton({
         local putIn = true
         local itemIDs = {378}
         
-        for i = 1, 499 do
+        for i = 1, 1000000 do
             table.insert(itemIDs, 378)
         end
         local Event = ReplicatedStorage.References.Comm.Events.UpdateStorageChest
 
         for _, itemID in ipairs(itemIDs) do
-            Event:FireServer(chest, putOut, itemID)
+            Event:FireServer(chest, Putout, itemID)
         end
     end,
 })
