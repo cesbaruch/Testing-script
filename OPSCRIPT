@@ -9,15 +9,15 @@ local Window = Rayfield:CreateWindow({
        FileName = "Nigga 69"
     },
 
-    KeySystem = False,
+    KeySystem = True,
     KeySettings = {
        Title = "OP SCRIPT"
        Subtitle = "Created by Cesar" ,
        Note = "In Honour of Kchungdz" ,
        FileName = "0", 
-       SaveKey = False,
-       GrabKeyFromSite = true,
-       Key = {"210809"}
+       SaveKey = True,
+       GrabKeyFromSite = True,
+       Key = {"200800"}
     }
  })
 
