@@ -12,7 +12,7 @@ local Window = Rayfield:CreateWindow({
     KeySystem = true,
     KeySettings = {
        Title = "OP SCRIPT",
-       Subtitle = "Created by Cesar" ,
+       Subtitle = "Created by BsktBall",
        Note = "In Honour of Kchungdz" ,
        FileName = "0", 
        SaveKey = true,
@@ -101,7 +101,7 @@ local healingEnabled = false
 local healTask = nil
 
 local Button = MainTab:CreateToggle({
-    Name = "Spam Pumpkin If <100HP",
+    Name = "Spam Pumps",
     Default = false,
     Callback = function(state)
         healingEnabled = state
@@ -614,7 +614,7 @@ local Button = Tab3:CreateButton({
         local putIn = true
         local itemIDs = {271}
         
-        for i = 1, 1000000 do
+        for i = 1, 10000 do
             table.insert(itemIDs, 271)
         end
         local Event = ReplicatedStorage.References.Comm.Events.UpdateStorageChest
@@ -660,7 +660,7 @@ local Button = Tab3:CreateButton({
         local putIn = true
         local itemIDs = {378}
         
-        for i = 1, 1000000 do
+        for i = 1, 10000 do
             table.insert(itemIDs, 378)
         end
         local Event = ReplicatedStorage.References.Comm.Events.UpdateStorageChest
