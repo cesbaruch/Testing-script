@@ -9,7 +9,7 @@ local Window = Rayfield:CreateWindow({
        FileName = "Nigga 69"
     },
 
-    KeySystem = true,
+    KeySystem = False,
     KeySettings = {
        Title = "OP SCRIPT"
        Subtitle = "Created by Cesar" ,
